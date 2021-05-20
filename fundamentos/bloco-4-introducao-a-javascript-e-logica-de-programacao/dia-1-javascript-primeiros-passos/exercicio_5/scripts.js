@@ -56,4 +56,16 @@ else {
   console.log(`O número ${intNumero} é negativo`);
 }
 
+// item 5 == programa que retorna booleano a respeti
+
+let anguloHum = 90;
+let anguloDois = 45;
+let anguloTres = 45;
+let SomaDosAngulos = (anguloHum + anguloDois + anguloTres);
+
+if (SomaDosAngulos != 180) {
+  console.log(false);
+} else {
+  console.log(true);
+}
 
