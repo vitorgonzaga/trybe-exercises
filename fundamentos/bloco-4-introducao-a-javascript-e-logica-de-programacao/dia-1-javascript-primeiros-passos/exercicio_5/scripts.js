@@ -132,3 +132,16 @@ switch (intNota) {
     console.log("Fatal Error!!!");
     break;
 }
+
+// item 8 == Escreva um numero que defina tres numeros em variáveis e retorne true se pelo menos uma das tres for par. Caso contraria retorna false
+
+let restoDaDivisao_a = (a % 2);
+let restoDaDivisao_b = (b % 2);
+let restoDaDivisao_c = (c % 2);
+
+if ((restoDaDivisao_a = 0) || (restoDaDivisao_b = 0) || (restoDaDivisao_c = 0)) {
+  console.log(true);  
+} else {
+  console.log(false);
+}
+
