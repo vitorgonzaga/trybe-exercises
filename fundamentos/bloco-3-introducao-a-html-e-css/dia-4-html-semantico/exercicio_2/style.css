@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+html body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header div {
+    background-color: aquamarine;
+    /* background-image: url(images/Stomatopoda.jpg); */
+    background-repeat: no-repeat;
+    /* opacity: 50%; */
+    height: 80px;
+    width: 100%;    
+    padding: 40px 0 0 20px;    
+    position: fixed;
+    z-index: 1;
+}
+
+/* .inicio-header {
+    position: fixed;
+} */
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    /* text-decoration: none;     */
+}
+
+nav ul li a {
+    text-decoration: none;    
+}
+
+nav ul li a:hover {
+    font-weight: 600;
+}
+
+nav ul li a:active {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.links-do-cabeçalho {
+    height: 50px;
+    width: 100%;
+    padding: 25px 0px 0 20px;
+    background-color: azure;
+    position: fixed;
+    top: 120px;        
+    z-index: 1;
+}
+
+main {
+    padding: 200px 0 0 0;
+}
+
+main article section h2 {        
+    height: 50px;
+    padding: 25px 0 0 20px;
+}
+
+main article section p {    
+    display: block;
+    text-indent: 50px;    
+    margin-left: 25px;
+    /* text-align: justify;
+    text-justify: inter-word; */
+    width: 800px;
+}
+
+.first-image-stomatopoda {
+    width: 800px;
+    margin: 20px 0 0 20px;
+}
+
+.first-image-stomatopoda img {
+    width: 800px;    
+}
+
+main article section table, th, td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+main article section table {
+    border-spacing: 5px;
+}
+
+.tabela_class_animal {
+    margin: 20px 0 0 126px;    
+}
+
+#eyes_of_stomatopada {
+    float: left;
+    width: 400px;
+    margin: 10px 10px 0 0
+    
+}
+
+#img_garras_stomatopada {
+    float: left;
+    width: 500px;
+    margin: 10px 10px 0 0;
+}
+
+#img_ferimento {    
+    width: 800px;        
+}
+
+#img_ferimento img {    
+    width: 800px;    
+    margin: 10px 0 0 20px
+}
+
+#Referencias_bibliográficas {
+    width: 200px;
+    height: 400px;
+    margin: 10px 0 0 20px;
+    position: absolute;
+    top: 250px;
+    left: 880px;
+    text-align: center;
+    border-left: 1px dashed black;
+    /* border-right: 1px dashed black; */
+    padding: 15px;    
+}
+
+main aside ul li {    
+    list-style-type: none;
+    height: auto;
+    margin: 10px 0 20px 0;
+    text-align: center;           
+}
+
+footer {
+    background-color: rgb(178, 186, 194);    
+    padding: 100px 0 100px 30px;
+    margin-top: 30px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.button1 {
+    background-color: #96def7;
+    color: rgb(58, 58, 58);    
+    border: none;    
+    padding: 20px 80px;
+    text-align: center;    
+    display: inline-block;    
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    margin: 20px 0 20px 220px;
+}
+
+.button1 a {    
+    text-align: center;
+    text-decoration: none;    
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.button1:hover {
+    background-color: #008CBA;
+    color: white;
+}

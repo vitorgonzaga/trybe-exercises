@@ -1,0 +1,46 @@
+
+div {
+    margin: 0;    
+    padding: 0;
+}
+
+div:hover {        
+    padding: 0;
+    border-style: dotted;
+    border-width: 5px;
+    border-color: lawngreen;
+    transition: border 1s ease-in-out;
+    /*transition: border;
+    border: 2px dotted teal    */
+    /*border-color: teal;
+    border-style: dotted;
+    border-width: 2px;*/    
+}
+
+div:nth-child(3) > h3 {
+    background-color:rgb(255,255,0);
+    font-style: italic;
+}
+
+div:nth-child(4) > h3 {
+    background-color: rgb(0,128,0);
+}
+
+div:nth-child(5) > h3 {
+    background-color:rgb(125,0,255);
+    padding: 20px;
+    font-style: italic
+}
+
+div:nth-child(6) > h3 {
+    background-color:rgb(18,26,179);
+}
+
+div:nth-child(7) > h3 {
+    background-color:rgb(255,206,13);
+    font-style: italic
+}
+
+/*div h3:nth-child(1) {     
+    background-color: yellow;
+}*/
