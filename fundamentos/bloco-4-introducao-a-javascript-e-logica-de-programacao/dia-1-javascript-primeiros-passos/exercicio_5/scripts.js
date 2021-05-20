@@ -99,3 +99,32 @@ switch (strPecaDeXadrezEdit) {
     break;
 }
 
+// Item 7 == converte uma nota data em porcentagem (de 0 a 100) em conceitos de A e F
+
+let intNota = 45
+
+switch (intNota) {
+  case (intNota>=90):
+    console.log("A");
+    break;
+
+  case (intNota>=80):
+    console.log("B");
+    break;
+
+  case (intNota>=70):
+    console.log("C");
+    break;
+
+  case (intNota>=60):
+    console.log("C");
+    break;
+      
+  case (intNota>=50):
+    console.log("D");
+    break;
+
+  default:
+    console.log("F");
+    break;
+}
