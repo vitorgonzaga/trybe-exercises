@@ -124,7 +124,11 @@ switch (intNota) {
     console.log("D");
     break;
 
-  default:
+  case (intNota<50):
     console.log("F");
+    break;
+
+  default:
+    console.log("Fatal Error!!!");
     break;
 }
