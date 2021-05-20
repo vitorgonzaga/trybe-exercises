@@ -69,3 +69,33 @@ if (SomaDosAngulos != 180) {
   console.log(true);
 }
 
+// item 6 == programa que retorna o movimento que uma peça de xadrez faz
+
+let strPecaDeXadrez = "Rainha"
+let strPecaDeXadrezEdit = strPecaDeXadrez.toLowerCase();
+
+switch (strPecaDeXadrezEdit) {
+  case "rainha":
+    console.log("todos os movimentos");
+    break;
+  
+  case "rei":
+    console.log("todos os movimentos limitados a uma casa por vez");
+    break;
+
+  case "bispo":
+    console.log("diagonais");
+    break;
+
+  case "cavalo":
+    console.log("movimentos em L");
+    break;
+
+  case "torre":
+    console.log("retas");
+    break;
+
+  default:
+    break;
+}
+
