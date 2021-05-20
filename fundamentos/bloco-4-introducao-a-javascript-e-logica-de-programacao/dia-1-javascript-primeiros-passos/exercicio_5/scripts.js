@@ -43,6 +43,17 @@ else {
   console.log(`Os numeros são iguais`);
 }
 
+// item 4 == retorne se o valor é positivo ou negativo
 
+let intNumero = 12;
+let intRestoDaDivisao = (intNumero % 2)
+console.log(`Resto da divisao: ${intRestoDaDivisao}`);
+
+if (intRestoDaDivisao == 0) {
+  console.log(`O número ${intNumero} é positivo`);
+}
+else {
+  console.log(`O número ${intNumero} é negativo`);
+}
 
 
