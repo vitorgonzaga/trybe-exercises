@@ -153,3 +153,18 @@ if ((restoDaDivisao_a = 0) || (restoDaDivisao_b = 0) || (restoDaDivisao_c = 0)) 
   console.log(true);
 }
 
+// item 10 == Calculadora de lucro/Prejuízo
+
+let dblcusto = 50;
+let dblprecoDeVenda = 100;
+let intQuantidade = 1000;
+
+if ((dblcusto <0) || (dblprecoDeVenda<0)) {
+  console.log(`Erro: Valor menor que zero`);
+} else {
+  let dblResultado = (dblprecoDeVenda-(dblcusto*(1.2)));
+  console.log(`Resultado: ${dblResultado*intQuantidade}`);
+}
+
+
+
