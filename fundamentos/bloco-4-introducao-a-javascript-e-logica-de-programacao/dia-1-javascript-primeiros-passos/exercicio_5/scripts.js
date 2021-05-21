@@ -166,5 +166,74 @@ if ((dblcusto <0) || (dblprecoDeVenda<0)) {
   console.log(`Resultado: ${dblResultado*intQuantidade}`);
 }
 
+// item 11 == Calculadora de Salário (Dedução de IR e INSS)
 
+let dblSalario = 3000;
+console.log(`Salario Bruto: ${dblSalario}`);
+
+//tabela do inss
+switch (true) {
+  case (dblSalario <= 1556.94):
+    dblAliquotaInss = 0.08;
+    break;
+    
+  case (dblSalario > 1556.94) && (dblSalario<=2594.92):
+    dblAliquotaInss = 0.09;
+    break;
+
+  case (dblSalario>2594.92) && (dblSalario<=5189.82):
+    dblAliquotaInss = 0.11;
+    break;
+
+  case (dblSalario>5189.82):
+    dblAliquotaInss = 0.11;
+    break;
+
+  default:
+    dblAliquotaInss = 0;
+    break;
+}
+
+let dblInssADeduzir = (dblSalario * dblAliquotaInss);
+console.log(`Deducao de INSS: ${dblInssADeduzir}`);
+let dblSalarioLiquidoDeInss = (dblSalario - dblInssADeduzir);
+console.log(`Salario Liquido de INSS: ${dblSalarioLiquidoDeInss}`);
+
+// Tabela do IR
+switch (true) {
+  case (dblSalarioLiquidoDeInss<=1903.98):
+    dblAliquotaIr = 0;
+    dblParcelaADeduzir = 0;
+    break;
+    
+  case (dblSalarioLiquidoDeInss>1903.99) && (dblSalarioLiquidoDeInss<=2826.65):
+    dblAliquotaIr = 0.075;
+    dblParcelaADeduzir = 142.80;
+    break;
+
+  case (dblSalarioLiquidoDeInss>2826.65) && (dblSalarioLiquidoDeInss<=3751.05):
+    dblAliquotaIr = 0.15;
+    dblParcelaADeduzir = 354.80;
+    break;
+
+  case (dblSalarioLiquidoDeInss>3751.05) && (dblSalarioLiquidoDeInss<=4664.68):
+    dblAliquotaIr = 0.225;
+    dblParcelaADeduzir = 636.13;
+    break;
+  
+  case (dblSalarioLiquidoDeInss>4664.68):
+    dblAliquotaIr = 0.275;
+    dblParcelaADeduzir = 869.36;
+    break;
+
+  default:
+    dblAliquotaIr = 0;
+    dblParcelaADeduzir = 0;
+    break;
+}
+
+let dblIrAPagar = ((dblSalarioLiquidoDeInss*dblAliquotaIr)-dblParcelaADeduzir)
+console.log(`IR a Pagar: ${dblIrAPagar}`);
+let dblSalarioLiquido = (dblSalarioLiquidoDeInss-dblIrAPagar)
+console.log(`Salario Liquido (deposito na cc): ${dblSalarioLiquido}`);
 
