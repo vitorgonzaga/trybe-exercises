@@ -145,3 +145,11 @@ if ((restoDaDivisao_a = 0) || (restoDaDivisao_b = 0) || (restoDaDivisao_c = 0)) 
   console.log(false);
 }
 
+// item 9 == mesmo caso do anterior poreḿ retornando true caso o numero seja impar
+
+if ((restoDaDivisao_a = 0) || (restoDaDivisao_b = 0) || (restoDaDivisao_c = 0)) {
+  console.log(false);  
+} else {
+  console.log(true);
+}
+
