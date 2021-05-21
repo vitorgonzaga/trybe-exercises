@@ -40,3 +40,31 @@ for (let index = 0; index < numbers.length; index +=1) {
 }
 console.log(maxNumber);
 
+// Também é possível utilizar a propriedade max da biblioteca math "Math.MAx"
+// Exemplo 1
+let numeromaximo = 0;
+var arr = [1, 2, 3];
+var max = arr.reduce(function(a, b) {
+  return Math.max(a, b);  
+});
+console.log(max);
+//Exemplo 2
+var arr = [1, 2, 3];
+var max = Math.max(...arr);
+console.log(max);
+
+// Descubra quantos valores impares existem no array e imprima o resultado
+
+QtdNumerosImpares = 0;
+for (let index = 0; index < numbers.length ; index += 1) {
+  let number = numbers[index]
+  if (number % 2 != 0) {
+    QtdNumerosImpares += 1
+  }
+}
+  
+if (QtdNumerosImpares === 0) {
+    console.log("nenhum valor impar encontrado");
+  } else {
+    console.log(`Existem ${QtdNumerosImpares} numeros impares`);
+  }
