@@ -42,7 +42,6 @@ console.log(maxNumber);
 
 // Também é possível utilizar a propriedade max da biblioteca math "Math.MAx"
 // Exemplo 1
-let numeromaximo = 0;
 var arr = [1, 2, 3];
 var max = arr.reduce(function(a, b) {
   return Math.max(a, b);  
@@ -68,3 +67,17 @@ if (QtdNumerosImpares === 0) {
   } else {
     console.log(`Existem ${QtdNumerosImpares} numeros impares`);
   }
+
+// Dexcubra o menor valor contido no array e imprima-o
+
+let minNumber = 0;
+for (let index = 0; index < numbers.length - 1; index += 1) {
+  let numberA = numbers[index];
+  let numberB = numbers[numbers.length - 1];
+  if (index == 0) {
+    minNumber = Math.min(numberA, numberB);  
+  } else {
+    minNumber = Math.min(minNumber, numberA, numberB);
+  }  
+}
+console.log(minNumber);
