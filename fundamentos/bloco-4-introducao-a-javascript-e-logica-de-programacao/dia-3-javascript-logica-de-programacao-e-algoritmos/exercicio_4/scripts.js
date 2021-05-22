@@ -19,3 +19,5 @@ for (let index = 0 ; index <= midOfMatrix; index += 1) {
   controlLeft -= 1;
   controlRight += 1;
 };
+
+// Dificil, tive que consultar o gabarito... :P
