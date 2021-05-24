@@ -67,3 +67,26 @@ function findIndexOfMinValue(myArray) {
 
 console.log(findIndexOfMinValue(arrTesteDois));
 
+// 4. Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+let arrNomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+
+function maiorNomeDoArray(myArray) {  
+  let charCountB = 0;
+  // let charCountC = 0;
+  let longestName = "";
+  for (let key in myArray) {
+    let charCountA = myArray[key].length;    
+    charCountB = Math.max(charCountA, charCountB);
+    // charCountB = charCountC;
+    if ((key) == (myArray[key].length - 1)) {
+      for (let index in myArray) {
+        if (myArray[index].length == charCountB) {
+          return myArray[index];
+        }
+      }
+    }  
+  }  
+}
+
+console.log(maiorNomeDoArray(arrNomes));
