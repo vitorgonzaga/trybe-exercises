@@ -50,3 +50,20 @@ function findIndexOfMaxValue(myArray) {
 
 console.log(findIndexOfMaxValue(arrTeste));
 
+// 3. Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+let arrTesteDois = [2, 4, 6, 7, 10, 0, -3];
+
+function findIndexOfMinValue(myArray) {
+  
+  let minValue = Math.min(...myArray)
+
+  for (let key in myArray) {
+    if (myArray[key] == minValue) {
+      return key;
+    }    
+  }
+}
+
+console.log(findIndexOfMinValue(arrTesteDois));
+
