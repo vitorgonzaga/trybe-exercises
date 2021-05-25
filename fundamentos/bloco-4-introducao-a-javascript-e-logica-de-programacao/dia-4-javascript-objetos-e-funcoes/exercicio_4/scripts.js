@@ -90,3 +90,39 @@ function maiorNomeDoArray(myArray) {
 }
 
 console.log(maiorNomeDoArray(arrNomes));
+
+// 5.Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+arrTeste = [2, 3, 2, 5, 8, 2, 3];
+
+function verificaQuemMaisSeRepete(myArray) {
+  
+  let arrRepeticoes = [];
+
+  for (let key in myArray) {
+    let contador = 0;
+    let numA = myArray[key]
+    // console.log(numA);
+    for (let index in myArray) {
+      let numB = myArray[index];
+      // console.log(numB);
+      if (numA == numB) {
+        contador += 1;
+      }
+    }
+    arrRepeticoes.push(contador);    
+  }
+
+  console.log(arrRepeticoes);
+
+  let intMaiorQtdeDeRepeticoes =  Math.max(...arrRepeticoes);
+  
+  for (let i in arrRepeticoes) {
+    if (arrRepeticoes[i] == intMaiorQtdeDeRepeticoes) {
+      return myArray[i];
+    }
+  }
+}
+
+console.log(verificaQuemMaisSeRepete(arrTeste));
+
