@@ -139,3 +139,27 @@ function somaDeHumAteN(integer) {
 }
 
 console.log(somaDeHumAteN(n));
+
+// 7. Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+
+function verificaFimPalavra(strWord, strEndingWord) {
+  
+  let arrEndingWord = strEndingWord.split('');
+  let arrWord = strWord.split('');
+  let blnCheck = true;
+  let intContador = (arrWord.length - 1);
+
+  for (let index = (arrEndingWord.length -1); index >= 0; index -= 1) {
+    
+      if (arrWord[intContador] != arrEndingWord[index]) {
+        blnCheck = false;
+      } 
+      intContador -= 1;
+    
+  }
+  return blnCheck;
+}
+
+console.log(verificaFimPalavra('trybe', 'be'));
+
+console.log(verificaFimPalavra('joaofernando', 'fernan'));
