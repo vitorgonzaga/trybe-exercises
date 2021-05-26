@@ -2,9 +2,9 @@
 <html>
   <body>
     <h2 id="page-title">Título</h2>
-    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <p id="paragraph" class="classParagraph">Dê uma cor para este parágrafo!</p>
     <h4 id="subtitle">Subtítulo</h4>
-    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p id="second-paragraph" class="classParagraph">Segundo parágrafo!</p>
 
     <script>
       const paragraph = document.getElementById("paragraph");      
@@ -18,6 +18,12 @@
 
       const subtitle = document.getElementById('subtitle');
       subtitle.innerText = 'Minhas considerações:'
+
+      const paragraphClass = document.getElementsByClassName('classParagraph');
+      paragraphClass[0].style.color = 'blue';
+
+      const subtitleByTag = document.getElementsByTagName('h4');
+      subtitleByTag[0].style.color = 'red';
 
     </script>
   </body>
