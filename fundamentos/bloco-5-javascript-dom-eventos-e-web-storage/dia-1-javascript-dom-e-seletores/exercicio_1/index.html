@@ -7,23 +7,44 @@
     <p id="second-paragraph" class="classParagraph">Segundo parágrafo!</p>
 
     <script>
-      const paragraph = document.getElementById("paragraph");      
+      // const paragraph = document.getElementById("paragraph");      
+      // paragraph.style.color = "red";
+
+      // const title = document.getElementById('page-title');
+      // title.innerText = 'Matrix';
+
+      // const secParagraph = document.getElementById('second-paragraph');
+      // secParagraph.innerText = 'Esse filme é uma viagem!';
+
+      // const subtitle = document.getElementById('subtitle');
+      // subtitle.innerText = 'Minhas considerações:'
+
+      // const paragraphClass = document.getElementsByClassName('classParagraph');
+      // paragraphClass[0].style.color = 'blue';
+
+      // const subtitleByTag = document.getElementsByTagName('h4');
+      // subtitleByTag[0].style.color = 'red';
+
+      // SUBSTITUINDO POR QUERYSELECTOR E QUERYSELECTORALL
+
+      const paragraph = document.querySelector('#paragraph')      
       paragraph.style.color = "red";
 
-      const title = document.getElementById('page-title');
+      const title = document.querySelector('#page-title');
       title.innerText = 'Matrix';
 
-      const secParagraph = document.getElementById('second-paragraph');
+      const secParagraph = document.querySelector('#second-paragraph');
       secParagraph.innerText = 'Esse filme é uma viagem!';
 
-      const subtitle = document.getElementById('subtitle');
+      const subtitle = document.querySelector('#subtitle');
       subtitle.innerText = 'Minhas considerações:'
 
-      const paragraphClass = document.getElementsByClassName('classParagraph');
+      const paragraphClass = document.querySelectorAll('.classParagraph');
       paragraphClass[0].style.color = 'blue';
 
-      const subtitleByTag = document.getElementsByTagName('h4');
-      subtitleByTag[0].style.color = 'red';
+      const subtitleByTag = document.querySelector('h4');
+      subtitleByTag.style.color = 'red';
+
 
     </script>
   </body>
