@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="classParagraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="classParagraph">Segundo parágrafo!</p>
+
+    <script>
+      // const paragraph = document.getElementById("paragraph");      
+      // paragraph.style.color = "red";
+
+      // const title = document.getElementById('page-title');
+      // title.innerText = 'Matrix';
+
+      // const secParagraph = document.getElementById('second-paragraph');
+      // secParagraph.innerText = 'Esse filme é uma viagem!';
+
+      // const subtitle = document.getElementById('subtitle');
+      // subtitle.innerText = 'Minhas considerações:'
+
+      // const paragraphClass = document.getElementsByClassName('classParagraph');
+      // paragraphClass[0].style.color = 'blue';
+
+      // const subtitleByTag = document.getElementsByTagName('h4');
+      // subtitleByTag[0].style.color = 'red';
+
+      // SUBSTITUINDO POR QUERYSELECTOR E QUERYSELECTORALL
+
+      const paragraph = document.querySelector('#paragraph')      
+      paragraph.style.color = "red";
+
+      const title = document.querySelector('#page-title');
+      title.innerText = 'Matrix';
+
+      const secParagraph = document.querySelector('#second-paragraph');
+      secParagraph.innerText = 'Esse filme é uma viagem!';
+
+      const subtitle = document.querySelector('#subtitle');
+      subtitle.innerText = 'Minhas considerações:'
+
+      const paragraphClass = document.querySelectorAll('.classParagraph');
+      paragraphClass[0].style.color = 'blue';
+
+      const subtitleByTag = document.querySelector('h4');
+      subtitleByTag.style.color = 'red';
+
+
+    </script>
+  </body>
+</html>
