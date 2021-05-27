@@ -20,7 +20,23 @@
     </div>
   </div>
   <script>
-    
+    // Acesse o elemento elementoOndeVoceEsta .
+    let inicialElement = document.getElementById('elementoOndeVoceEsta');    
+    console.log(inicialElement);
+    // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    inicialElement.parentNode.style.backgroundColor = 'lightblue';
+    // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    inicialElement.firstElementChild.innerHTML = "Adicionando texto de exemplo aqui..."
+    // Acesse o primeiroFilho a partir de pai .
+    console.log(document.getElementById('pai').firstElementChild); 
+    // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+    inicialElement.firstChild
+    // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+    console.log(inicialElement.parentNode.innerText); 
+    // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+    console.log(inicialElement.parentNode.children[2]); 
+    // Agora acesse o terceiroFilho a partir de pai.
+    console.log(document.getElementById('pai').children[2]); 
   </script>  
 </body>
 </html>
