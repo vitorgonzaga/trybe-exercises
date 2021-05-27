@@ -37,6 +37,21 @@
     console.log(inicialElement.parentNode.children[2]); 
     // Agora acesse o terceiroFilho a partir de pai.
     console.log(document.getElementById('pai').children[2]); 
+
+    // Pratica ref a segunda parte do conteúdo =============================
+    
+    // Crie um irmão para elementoOndeVoceEsta .
+    let brotherElement = document.createElement('div');
+    document.querySelector('#pai').appendChild(brotherElement);
+    // Crie um filho para elementoOndeVoceEsta .
+    let childElement = document.createElement('div');
+    inicialElement.appendChild(childElement);
+    // Crie um filho para primeiroFilhoDoFilho .
+    let createDiv = document.createElement('div');
+    let filhoDoPrimeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho').appendChild(createDiv);
+    // A partir desse filho criado, acesse terceiroFilho .
+    console.log(filhoDoPrimeiroFilhoDoFilho.parentNode.parentNode.parentNode.children[2]);
+
   </script>  
 </body>
 </html>
