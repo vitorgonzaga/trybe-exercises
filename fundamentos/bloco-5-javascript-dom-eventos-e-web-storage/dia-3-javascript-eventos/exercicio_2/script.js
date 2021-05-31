@@ -67,3 +67,40 @@ btnHoliday.addEventListener('click', function() {
   }
 )
 
+function createFridayButton (string) {
+  const buttonFriday = document.createElement('button');
+  buttonFriday.id = 'btn-friday';
+  buttonFriday.innerHTML = string
+  const divButtons = document.querySelector('.buttons-container');
+  divButtons.appendChild(buttonFriday);
+}
+
+createFridayButton('Sexta-feira');
+
+let btnFriday = document.querySelector('#btn-friday');
+
+btnFriday.addEventListener('click', function() {
+    
+  let arrFridayDaysInDecember = [4, 11, 18, 25];
+  let arrDayElement = document.querySelectorAll('.days-container ul li');
+    
+    for (let day = 0; day < arrDayElement.length; day += 1) {
+      let dayDecemberLi = parseInt(arrDayElement[day].innerHTML);
+      for (let d = 0; d < arrFridayDaysInDecember.length; d += 1) {
+        if (dayDecemberLi == arrFridayDaysInDecember[d]) {
+          arrDayElement[day].className = 'friday';
+        }
+      }
+    }
+    
+    let arrHolidays = document.querySelectorAll('.friday');
+    
+    for (let i = 0; i < arrHolidays.length; i += 1) {      
+      if (arrHolidays[i].innerHTML !== 'Sexta-feira') {
+        arrHolidays[i].innerHTML = 'Sexta-feira';
+      } else {
+        arrHolidays[i].innerHTML = arrFridayDaysInDecember[i];
+      }
+    }
+  }
+)
