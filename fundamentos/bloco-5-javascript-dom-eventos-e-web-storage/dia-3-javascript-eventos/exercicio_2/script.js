@@ -33,7 +33,37 @@ fillDaysIntoCalendar();
 function createHolidayButton (string) {
   const buttonHoliday = document.createElement('button');
   buttonHoliday.id = 'btn-holiday';
-  const divButtons = document.getElementsByClassName('buttons-container');
+  buttonHoliday.innerHTML = string
+  const divButtons = document.querySelector('.buttons-container');
   divButtons.appendChild(buttonHoliday);
 }
+
+createHolidayButton('Feriados');
+
+let btnHoliday = document.querySelector('#btn-holiday');
+
+btnHoliday.addEventListener('click', function() {
+    let arrHolidayDaysInDecember = [24, 25, 31];
+    let arrDayElement = document.querySelectorAll('.days-container ul li');
+    
+    for (let day = 0; day < arrDayElement.length; day += 1) {
+      let dayDecemberLi = parseInt(arrDayElement[day].innerHTML);
+      for (let d = 0; d < arrHolidayDaysInDecember.length; d += 1) {
+        if (dayDecemberLi == arrHolidayDaysInDecember[d]) {
+          arrDayElement[day].className = 'holiday';
+        }
+      }
+    }
+    
+    let arrHolidays = document.querySelectorAll('.holiday');
+    
+    for (let i = 0; i < arrHolidays.length; i += 1) {      
+      if (arrHolidays[i].style.backgroundColor !== 'yellow') {
+        arrHolidays[i].style.backgroundColor = 'yellow';
+      } else {
+        arrHolidays[i].style.backgroundColor = 'rgb(238,238,238)';
+      }
+    }
+  }
+)
 
