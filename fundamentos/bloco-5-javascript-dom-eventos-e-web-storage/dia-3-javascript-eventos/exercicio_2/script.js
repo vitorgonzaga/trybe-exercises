@@ -29,3 +29,11 @@ function fillDaysIntoCalendar() {
 }
 
 fillDaysIntoCalendar();
+
+function createHolidayButton (string) {
+  const buttonHoliday = document.createElement('button');
+  buttonHoliday.id = 'btn-holiday';
+  const divButtons = document.getElementsByClassName('buttons-container');
+  divButtons.appendChild(buttonHoliday);
+}
+
