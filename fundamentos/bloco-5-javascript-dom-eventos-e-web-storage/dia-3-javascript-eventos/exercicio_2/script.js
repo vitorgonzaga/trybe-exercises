@@ -124,3 +124,10 @@ function dayMouseOut() {
 dayMouseOver();
 dayMouseOut();
 
+function createTask(string) {
+  let task = document.createElement('span');
+  task.innerHTML = string
+  let getDivMyTasks = document.getElementsByClassName('my-tasks');
+  getDivMyTasks.appendChild(task)
+}
+
