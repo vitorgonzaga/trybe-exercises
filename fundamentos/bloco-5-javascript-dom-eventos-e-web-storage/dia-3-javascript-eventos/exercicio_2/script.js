@@ -104,3 +104,23 @@ btnFriday.addEventListener('click', function() {
     }
   }
 )
+
+function dayMouseOver() {
+  let ulPai = document.querySelector('#days');  
+  ulPai.addEventListener('mouseover', function(evento) {
+    evento.target.style.fontSize = '30px';
+    evento.target.style.fontWeight = '600';
+  })
+};
+
+function dayMouseOut() {
+  let days = document.querySelector('#days');
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  })
+};
+
+dayMouseOver();
+dayMouseOut();
+
