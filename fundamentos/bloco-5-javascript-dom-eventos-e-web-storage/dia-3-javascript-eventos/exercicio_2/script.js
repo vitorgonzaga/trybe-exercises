@@ -128,7 +128,75 @@ function createTask(string) {
   let task = document.createElement('span');
   task.innerHTML = string
   let getDivMyTasks = document.getElementsByClassName('my-tasks');
-  getDivMyTasks.appendChild(task)
+  getDivMyTasks[0].appendChild(task)
 }
 
+function createLegendDivTask(string) {
+  let elementDiv = document.createElement('div');
+  elementDiv.className = 'task';
+  elementDiv.style.backgroundColor = string;
 
+  let getDivMyTasks = document.querySelector('.my-tasks');
+  getDivMyTasks.appendChild(elementDiv);
+}
+
+createTask('Terminar os exercicios do bloco 5.3');
+createLegendDivTask('red');
+
+let divSelected = document.querySelector('.task');
+
+divSelected.addEventListener('click', function(event) {
+  if (event.target.className == 'task-selected') {
+    event.target.className = 'task';
+  } else {
+    event.target.className = 'task-selected'
+  }
+  // 
+});
+
+divSelected.addEventListener('click', function(event) {
+  let strColorSelected = event.target.style.backgroundColor
+  sessionStorage.setItem('Selected Color', strColorSelected)
+})
+
+function dayChangeColor() {   
+  let days = document.querySelector('#days');  
+  days.addEventListener('click', function(event) {
+    let SelectedColor = sessionStorage.getItem('Selected Color');
+    if (event.target.style.color == SelectedColor) {
+      event.target.style.color = 'rgb(119,119,119)';
+    } else {
+      event.target.style.color = SelectedColor;    
+    }    
+  })
+};
+
+dayChangeColor();
+
+function addTask() {   
+  let strTextInput = document.querySelector('#task-input').value; //Seleciona o texto na tag input
+  if (strTextInput == '') {
+    document.alert('Error: task input empty');
+  } else {
+    let taskListElement = document.createElement('li');
+    taskListElement.innerHTML = strTextInput;
+    taskListElement.style.listStyle = 'none'
+    taskListElement.style.fontFamily = 'Verdana, Geneva, Tahoma, sans-serif';
+    taskListElement.style.fontSize = '20px';
+    taskListElement.style.fontWeight = '200';
+    taskListElement.style.Color = '#666';
+    let divForTaskList = document.querySelector('.task-list-container');
+    divForTaskList.appendChild(taskListElement);    
+  }
+}
+
+let btnAddTask = document.querySelector('#btn-add');
+btnAddTask.addEventListener('click', addTask);
+
+let inputField = document.querySelector('#task-input');
+inputField.addEventListener('keyup', function(event) {
+  let key = event.keyCode;
+  if (key == '13') {
+    addTask();
+  }
+});
