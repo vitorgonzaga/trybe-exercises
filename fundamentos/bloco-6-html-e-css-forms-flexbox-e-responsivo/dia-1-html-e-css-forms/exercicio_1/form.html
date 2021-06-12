@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Curriculo</title>
+</head>
+<body>
+  <form id="cv-form" action="" method="GET">    
+    <div class="form-container">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div class="line-content">
+          <label for="nome-do-candidato">Nome
+            <input type="text" name="name" id="nome-do-candidato" maxlength="40" required>
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="email">Email
+            <input type="text" name="email" id="email" maxlength="50" required>
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="cpf">CPF
+            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="endereco">Endereço
+            <input type="text" name="address" id="endereco" maxlength="200" required>
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="cidade">Cidade
+            <input type="text" name="city" id="cidade" maxlength="28" required>
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="select-estado">UF
+            <select name="state" id="select-estado">          
+            </select>        
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="tipo-de-imovel">Tipo de Imóvel
+            <input type="radio" name="houseType" id="tipo-de-imovel-casa" value="casa">Casa;
+            <input type="radio" name="houseType" id="tipo-de-imovel-apt" value="apt">Apartamento;
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Experiências do último emprego</legend>
+        <div class="line-content">
+          <label for="text-last-job">Resumo das Atividades
+            <textarea name="resume" id="text-last-job" cols="30" rows="10" wrap="hard" maxlength="1000" required></textarea>
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="ultimo-cargo">Último Cargo
+            <input type="text" id="ultimo-cargo" name="role">
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="desc-last-cargo">Descrição do Cargo
+            <input type="text" id="desc-last-cargo" name="roleDescription" maxlength="500" required>
+          </label>
+        </div>
+        <div class="line-content">
+          <label for="data-inicio-last-job">Data de Início
+            <input type="text" name="starDate" value="" required>
+          </label>
+        </div>
+      </fieldset>
+      <button type="submit" id="submit-button">Enviar</button>
+      <button type="button" id="clear-button">Limpar</button>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
