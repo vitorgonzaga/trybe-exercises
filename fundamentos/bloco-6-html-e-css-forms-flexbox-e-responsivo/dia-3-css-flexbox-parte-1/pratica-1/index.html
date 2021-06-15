@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Flex Flow</title>
+    <style>
+      .box {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 50px;
+        height: 60px;
+        margin: 10px 10px;
+        text-align: center;
+        /* width: 100%; */
+        /* display: flex;
+        align-content: center;
+        justify-content: center;
+        align-self: stretch; */        
+      }
+
+      .box-container {
+        background-color: #0fa36b;
+        display: flex;
+        /* ADICIONE AQUI SEUS TESTES */        
+        flex-flow: column wrap;
+        align-items: center;
+        /* justify-content: center; */
+        /* align-self: stretch;         */
+        /* justify-content: stretch; */
+      }
+
+      .aligns-self {
+        align-self: stretch;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box aligns-self">1</div>
+      <div class="box aligns-self">2</div>
+      <div class="box aligns-self">3</div>
+      <div class="box aligns-self">4</div>
+      <div class="box aligns-self">5</div>
+    </div>
+  </body>
+</html>

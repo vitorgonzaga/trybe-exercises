@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Justify Content</title>
+    <style>
+      .box {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 150px;
+        /* height: 60px; */
+        margin: 10px 5px;
+        display: flex;        
+        align-self: center;
+        justify-content: center;        
+        /* text-align: center; */
+        /* width: 100%;        */
+        /* align-self: stretch; */
+      }
+
+      .box-container {
+        background-color: #0fa36b;
+        display: flex;        
+        /* ADICIONE AQUI SEUS TESTES */
+        flex-flow: column nowrap;
+        /* justify-content: space-around;         */
+        /* align-content: center;         */
+        align-items: center;
+      }
+
+      .align-self {
+        align-self: stretch;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box align-self">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </body>
+</html>
