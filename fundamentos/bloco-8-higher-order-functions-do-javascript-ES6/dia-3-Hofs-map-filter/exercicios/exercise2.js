@@ -92,8 +92,35 @@ const expectedResult = [
   },
 ];
 
+let calcAge = (intBirthYear, intReleaseYear) => intReleaseYear - intBirthYear;
+
 function nameAndAge() {
-  // escreva seu código aqui
-}
+  let output = books.map(book => (
+    // Atenção para as chaves que formatam o output como um objeto/dicionário;
+    {
+      author: book.author.name,
+      age: book.releaseYear - book.author.birthYear,
+    }
+  ));
+  output.sort((itemA, itemB) => (itemA.age - itemB.age));
+  return output;
+};
+
+// Gabarito
+// A diferença da abordagem que eu utilizei é que o gabarito não declarou uma variável para receber o array resultado do map. Foi direto para o return.
+
+// function nameAndAge() {
+//   return books
+//   .map(book => (
+//     // Atenção para as chaves que formatam o output como um objeto/dicionário;
+//     {
+//       author: book.author.name,
+//       age: book.releaseYear - book.author.birthYear,
+//     }
+//   ))
+//   .sort((itemA, itemB) => (itemA.age - itemB.age));
+// };
+
+// console.log(nameAndAge());
 
 assert.deepStrictEqual(nameAndAge(), expectedResult);
