@@ -160,3 +160,37 @@ const extractEvenFromArray = (array) => array.map(item => item % 2 === 0 ? item 
 
 console.log(extractEvenFromArray(numerosPares));
 
+// ******************************************************************
+// Default Destructuring
+// ******************************************************************
+
+// Do jeito que está, quando passamos person para a função GetNationality o retorno é João is undefined . Ajuste a função GetNationality para que a chamada GetNationality(person) retorne João is Brazilian .
+// Basta atribuir um valor ao parâmetro 'nationality' com sinal de igual e o valor (int, string, float, obj, array etc...)
+
+const getNationality = ({ firstName, nationality = 'Brazilian' }) => `${firstName} is ${nationality}`;
+
+const person = {
+  firstName: 'João',
+  lastName: 'Jr II',
+};
+
+const otherPerson = {
+  firstName: 'Ivan',
+  lastName: 'Ivanovich',
+  nationality: 'Russian',
+};
+
+console.log(getNationality(otherPerson)); // Ivan is Russian
+console.log(getNationality(person));
+
+// ******************************************************************
+// Default Destructuring
+// ******************************************************************
+
+// Agora é hora de praticar: altere a função getPosition utilizando a property shorthand .
+
+const getPosition = (latitude, longitude) => ({
+  latitude: latitude,
+  longitude: longitude});
+
+console.log(getPosition(-19.8157, -43.9542));
