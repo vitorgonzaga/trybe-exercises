@@ -193,4 +193,14 @@ const getPosition = (latitude, longitude) => ({
   latitude: latitude,
   longitude: longitude});
 
+// Função refatorada:
+
+  const getPositionUsingShorthand = (latitude, longitude) => {
+  return {
+    latitude,
+    longitude
+  }
+};
+
 console.log(getPosition(-19.8157, -43.9542));
+console.log(getPositionUsingShorthand(-11.11, -11.11));
