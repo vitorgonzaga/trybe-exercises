@@ -77,4 +77,27 @@ console.log(StudentName); // Maria (NESSE ARQUIVO JÁ HAVIA DECLARAÇÃO DE PROP
 console.log(classAssigned); // Turma B
 console.log(subject); // Matemática
 
+// Uma outra situação que podemos usar a desestruturação de objetos é quando queremos passar os valores de um objeto como parâmetros para uma função, como no exemplo abaixo:
+
+const newProduct = {
+  name: 'Smart TV Crystal UHD',
+  price: '1899.05',
+  seller: 'Casas de Minas',
+};
+
+// Contudo cabe lembrar que o nome da propriedade deve existir no objeto que a função esperar receber, caso contrário, uma alternativa seria atribuir uma valor padrão.
+
+const printProductDetails = ({ name, price, seller }) => {
+  console.log(`Promoção! ${name} por apenas ${price} é só aqui: ${seller}`);
+};
+
+printProductDetails(newProduct); // Promoção! Smart TV Crystal UHD por apenas 1899.05 é só aqui: Casas de Minas
+
+// ******************************************************************
+// ARRAY Destructuring
+// ******************************************************************
+
+
+
+
 
