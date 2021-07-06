@@ -19,7 +19,7 @@ const sendMarsTemperature = (onSucess, onError) => {
   setTimeout(() => {
     const marsTemperature = getMarsTemperature();
     const rateOfSucess = Math.random() <= 0.6;
-    if (rateOfSucess)  onSucess(marsTemperature)
+    if (rateOfSucess) onSucess(marsTemperature)
     else onError('Robot is busy');
   }, messageDelay());
 };
