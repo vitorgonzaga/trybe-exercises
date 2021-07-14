@@ -10,11 +10,13 @@ function myRemove(arr, item) {
   return newArr;
 }
 
+module.exports = myRemove;
+
 // implemente seus testes aqui
 
-assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]);
-assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
-const myList = [5, 6, 7, 8];
-myRemove(myList, 5);
-assert.deepStrictEqual(myList, [5, 6, 7, 8]); // Tem que lançar um erro
-assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]);
+// assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]);
+// assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
+// const myList = [5, 6, 7, 8];
+// myRemove(myList, 5);
+// assert.deepStrictEqual(myList, [5, 6, 7, 8]); // Tem que lançar um erro
+// assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]);
