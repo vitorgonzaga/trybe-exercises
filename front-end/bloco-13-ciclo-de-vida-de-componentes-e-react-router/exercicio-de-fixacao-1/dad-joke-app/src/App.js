@@ -1,12 +1,14 @@
+import React from 'react';
 import DadJoke from './DadJoke';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <DadJoke />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <DadJoke />
+      </div>
+    );
+  }
 }
 
 export default App;
