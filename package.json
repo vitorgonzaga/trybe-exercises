@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "node-fetch": "^2.6.1"
-  },
-  "devDependencies": {
-    "jest": "^27.0.6"
+    "node-fetch": "^2.6.1",
+    "redux": "^4.1.1"
   },
   "scripts": {
     "test": "jest --watch"
