@@ -130,8 +130,8 @@ db.clientes.aggregate([
               $and: [
                 // { $not: { $eq: [ "$status", "PAGAMENTO NAO APROVADO" ] } },
                 { $eq: [ "$clienteId", "$$clienteId" ] },
-                { $gte: [ "$dataVenda", "$$startDate" ] },
-                { $lte: [ "$dataVenda", "$$endDate" ] }
+                { $gte: [ "$dataVenda", "$$startDate" ] }, // Não está funcionando
+                { $lte: [ "$dataVenda", "$$endDate" ] } // Não está funcionando
                 // {
                 //   dataVenda: {
                 //     $gte: { $millisecond: ISODate('2019-06-01') },
@@ -296,4 +296,28 @@ db.vendas.aggregate([
 
 // Exercício 8 : Selecione todas as vendas do mês de Março de 2020 , com status EM SEPARACAO . Acrescente um campo chamado dataEntregaPrevista com valor igual a três dias após a data da venda. Retorne apenas os campos clienteId , dataVenda e dataEntregaPrevista .
 
+db.vendas.aggregate([
+  {
+    $match: { status: "EM SEPARACAO" }
+  },
+  {
+    /**
+     * newField: The new field name.
+     * expression: The new field expression.
+     */
+    $addFields: {
+      dataEntregaPrevista: {
+        $add: [ "$dataVenda", 3*24*60*60000 ]
+      }
+    }
+  },
+  {
+    $project: {
+      _id: false,
+      clienteId: true,
+      dataVenda: true,
+      dataEntregaPrevista: true,
+    }
+  },
+]);
 
